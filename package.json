@@ -1,0 +1,42 @@
+{
+  "name": "pi-superagent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A proactive coding agent for one repository, built on the Pi coding agent SDK: it listens to Sources (GitHub, a local inbox), evaluates requests under a Policy, turns authorized ones into Tickets, and executes each in its own Pi session and directory.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pi-superagent": "bin/pi-superagent.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "prompts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "start": "tsx src/cli.ts start",
+    "dev": "tsx src/cli.ts"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "1.4.0",
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "typebox": "1.3.27",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
