@@ -1,0 +1,1 @@
+Shell notes: your working directory is the ticket directory. Use `gh` for GitHub reads and writes, `git` for the checkout. Do not delete the ticket directory. Commands that need credentials you do not have fail: report the concrete missing prerequisite instead of guessing.
